@@ -1,20 +1,20 @@
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { Col, Row } from "react-styled-flexboxgrid";
+import MainLayout from "../components/main-layout/main-layout";
+import { Name, Description } from "../styles/home.styled";
 
 export default function Home() {
   const { t } = useTranslation();
   return (
-    <div className="container">
-      <main>
-        <motion.div animate={{ x: 100 }}>
-          <h1>{t("home.title")}</h1>
-        </motion.div>
-      </main>
-
-      <footer>
-        <p>{t("home.footer.madeIn")} </p>
-      </footer>
-    </div>
+    <MainLayout>
+      <Row bottom="xs">
+        <Col md={6} xs={12}>
+          <Name>{t("home.name")}</Name>
+          <Description>{t("home.description")}</Description>
+        </Col>
+      </Row>
+    </MainLayout>
   );
 }
