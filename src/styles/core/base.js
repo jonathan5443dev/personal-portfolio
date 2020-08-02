@@ -8,6 +8,7 @@ const BaseStyles = createGlobalStyle`
     body {
         font-family: ${({ theme }) => theme.font.family.primary};
         background-color: ${({ theme }) => theme.colors.bgColor};
+        color: ${({ theme }) => theme.font.color.primary};
         height: 100vh;
     }
     *,
