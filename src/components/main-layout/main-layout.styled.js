@@ -8,4 +8,5 @@ export const Container = styled(Grid)`
   background: ${({ background }) =>
     background && `url(${background}) no-repeat center center fixed;`}
   background-size: cover;
+  filter: grayscale(100%);
 `;
